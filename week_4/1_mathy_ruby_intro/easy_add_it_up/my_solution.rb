@@ -8,6 +8,16 @@
 
 # 1. Pseudocode
 
+# total => 
+# take all elements in given array
+# compute sum
+
+# sentence maker =>
+# convert all elements into strings
+# upcase first letter of first element
+# concatenate strings together
+# add period at end
+
 # What is the input?
 
 # An array of numbers
