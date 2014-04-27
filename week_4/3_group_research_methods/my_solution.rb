@@ -20,6 +20,14 @@ end
 
 # Person 2
 def my_array_modification_method(source, thing_to_modify)
+	source = source.map! do |i|
+		if i.is_a? Integer
+		 i = i + thing_to_modify
+		else
+			i
+		end
+	end
+	return source
   # Your code here!
 end
 
@@ -34,16 +42,24 @@ end
 
 
 # Person 3
-def my_array_sorting_method(source)
+def my_array_sorting_method(source, thing_to_sort = nil)
+	source = source.uniq
+	sourceString = source.map{|i| i.to_s}
+	sourceString.sort_by{|num| num}
   # Your code here!
 end
 
-def my_hash_sorting_method(source)
+print my_array_sorting_method(i_want_pets)
+
+def my_hash_sorting_method(source, thing_to_sort = nil)
+	source.sort_by{|key,value| value}
   # Your code here!
 end
+
+# This may be false depending on how your method deals with ordering the animals with the same ages.
 
 # Identify and describe the ruby method you implemented. 
-# 
+# As person #2 in my group
 #
 #
 
@@ -58,9 +74,9 @@ def my_hash_deletion_method(source, thing_to_delete)
 end
 
 # Identify and describe the ruby method you implemented. 
-# 
-#
-#
+#I used the sort_by method on both the array and hash. 
+#Sort_by takes in an object (could be an array or hash) and then a block that is the sorting parameter (e.g. the value in a key-value pair). If no block is specified it will do the standard sort. 
+
 
 
 ################## DRIVER CODE ###################################
@@ -72,7 +88,9 @@ p my_hash_finding_method(my_family_pets_ages, 3) == ["Hoobie", "Ditto"]
 p my_array_modification_method(i_want_pets, 1) == ["I", "want", 4, "pets", "but", "I", "only", "have", 3 ]
 p my_hash_modification_method(my_family_pets_ages, 2) == {"Evi" => 8, "Hoobie" => 5, "George" => 14, "Bogart" => 6, "Poly" => 6, "Annabelle" => 2, "Ditto" => 5}
 p my_array_sorting_method(i_want_pets) == ["3", "4", "I", "but", "have", "only", "pets", "want"]
-p my_hash_sorting_method(my_family_pets_ages) == [["Annabelle", 2], ["Ditto", 5], ["Hoobie", 5], ["Bogart", 6], ["Poly", 6], ["Evi", 8], ["George", 14]] 
+print my_array_sorting_method(i_want_pets)
+p my_hash_sorting_method(my_family_pets_ages) == [["Annabelle", 2], ["Ditto", 5], ["Hoobie", 5], ["Bogart", 6], ["Poly", 6], ["Evi", 8], ["George", 14]]
+print my_hash_sorting_method(my_family_pets_ages) 
 # This may be false depending on how your method deals with ordering the animals with the same ages.
 p my_array_deletion_method(i_want_pets, "a") == ["I", 4, "pets", "but", "I", "only", 3 ]
 p my_hash_deletion_method(my_family_pets_ages, "George") == {"Evi" => 8, "Hoobie" => 5, "Bogart" => 6, "Poly" => 6, "Annabelle" => 2, "Ditto" => 5}

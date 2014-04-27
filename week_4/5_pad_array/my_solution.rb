@@ -59,7 +59,6 @@ class Array #extend class
           copy = self.dup #make non-destructive via duplication
           amount.times{copy.push(output)} 
           return copy
-          end
        def pad!(l, output = nil)
        	amount = l - self.length
           amount.times{self.push(output)} #value of self is permanently changed
