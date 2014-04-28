@@ -84,29 +84,37 @@ end
 
  def north_korean_cipher(sentence)
 punctuation = sentence.split("").pop #Assign new variable punctuation as last element of sentence array (split by "")
-sentence_with_spaces = sentence.scan(/\w+/) #
-sentence_with_spaces = (sentence_with_spaces.map{|word| north_korean_word(word)}.join(" ") + punctuation).to_s
-if /\d+/.match(sentence_with_spaces)
-sentence_with_spaces.gsub!(/\d+/) { |num| num.to_i / 100 }
+sentence_with_spaces = sentence.scan(/\w+/) #Divide sentence by words, make into word array. The w+ is actually key here - it will treat non-alphanumeric characters as separators, so "brostoff#is#cool" becomes ["brostoff", "is", "cool"].
+sentence_with_spaces = (sentence_with_spaces.map{|word| north_korean_word(word)}.join(" ") + punctuation).to_s #Use a method on individual words (see below) to decode, and space each element in the array out with a space. Add punctuation at end (assume it is a . or ! basically)
+if /\d+/.match(sentence_with_spaces) #Conditional - search for numbers (that are strings) in sentence
+sentence_with_spaces.gsub!(/\d+/) { |num| num.to_i / 100 } #Divide all numbers by 100
 end
-return sentence_with_spaces
+return sentence_with_spaces #Return the new sentence
 end
 
-def north_korean_word(word)
-  arrayAlphabet =[*('a'..'z')]  
-  decoded = word.split("").map do |x| 
-  	if arrayAlphabet.include? x 
+def north_korean_word(word) #This is the important "decoding method" - the other is more formatting output
+  arrayAlphabet =[*('a'..'z')]  #Using ranges, makes an array of every letter in the alphabet
+  decoded = word.split("").map do |x| #Take the input - a word - and divy it up into characters. Conditionals follow for each letter
+  	if arrayAlphabet.include? x  #If the character is in the alphabet, move it four spaces forward (a --> e)
   	arrayAlphabet[arrayAlphabet.index(x) - 4]
   else 
-    x
+    x #If it is not in the alphabet, just leave unchanged
   end
 end
-   decoded.join("")
+   decoded.join("") #Converts the array into a string and makes one "deciphered" word
 end
 
 p north_korean_cipher("m^aerx%e&gsoi!") == "i want a coke!" #This is driver code and should print true
-p north_korean_cipher("syv@tistpi$iex#xli*qswx*hipmgmsyw*erh*ryxvmxmsyw%jsshw^jvsq^syv#1000000#tvsjmxefpi$jevqw.") == "our people eat the most delicious and nutritious foods from our 1000000 profitable farms."
+p north_korean_cipher("syv@tistpi$iex#xli*qswx*hipmgmsyw*erh*ryxvmxmsyw%jsshw^jvsq^syv#1000000#tvsjmxefpi$jevqw.") == "our people eat the most delicious and nutritious foods from our 10000 profitable farms."
 p north_korean_cipher("syv%ryoiw#evi#liph^xskixliv@fc^kveti-jpezsvih@xsjjii.*hsr'x%xipp&xli#yw!") == "our nukes are held together by grape flavored toffee don t tell the us!"
 p north_korean_cipher("mj^csy&qeoi^sri*qmwxeoi,%kir.*vm@csrk-kmp,&csy^ampp*fi&vitpegih*fc@hirrmw&vshqer.") == "if you make one mistake gen ri yong gil you will be replaced by dennis rodman."
 p north_korean_cipher("ribx^wxst:$wsyxl%osvie,$xlir$neter,#xlir%xli%asvph!") == "next stop south korea then japan then the world!"
-p north_korean_cipher("ger^wsqifshc*nywx^kix^qi&10000*fekw@sj$gssp%vergl@hsvmxsw?") == "can somebody just get me 10000 bags of cool ranch doritos?"
+p north_korean_cipher("ger^wsqifshc*nywx^kix^qi&10000*fekw@sj$gssp%vergl@hsvmxsw?") == "can somebody just get me 100 bags of cool ranch doritos?"
+
+#Reflection 
+
+#Ian was a pleasure to work with Ian here, who explained the scan method and index methods well.
+#I liked Ian's solution of using the index method with four subtracted in order to do the crucial decoding.
+#I did not realize how key sentence.scan(/\w+/) was here. It cleans up the non-alphanumeric characters here.
+#If I actually worked for the NSA, I would not use w+. I would be more stringent in treating all individual characters, or else the North Koreans could easily start messing with certain punctuation marks.
+
