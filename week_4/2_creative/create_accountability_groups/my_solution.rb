@@ -1,7 +1,7 @@
 # U2.W4: Create Accountability Groups
 
 
-# I worked on this challenge [by myself, with: ].
+# I worked on this challenge by mself.
 
 # 2. Pseudocode
 
