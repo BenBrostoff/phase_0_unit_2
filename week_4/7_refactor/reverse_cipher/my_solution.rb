@@ -70,9 +70,25 @@ end
 #In effect, x.sample(x.length) is the same as x.shuffle.
 
 # 5. Are there any other methods you want to understand better?
+
+# I like zip and think it has significant potential to be helpful.
+# Sometimes when you have an array of arrays, you need to make it "cleaner" or re-order based on certain factors, and zip can do this.
+# Rotate also is a useful method for "shifting" an array on an "axis".
+
 # 6. Does this code look better or worse than your refactored solution
 #    of the original cipher code? What's better? What's worse?
+
+# I think they're hard to compare. We didn't make use of a hash in our code.
+# However, I like the hash table as the decipher key and the use of zip and rotate.
+# Our code may have been fewer lines and more to the point with treating non alphabet characters.
+# However, as "decoder" code, this code would be easier to change in the future (the hash table is useful here).
+
 # 7. Is this good code? What makes it good? What makes it bad?
+
+# I like how this code uses a dynamically changing hash to solve a problem.
+# If it has a flaw, it's that it goes too specific on the conditions.
+# I'd prefer to have a "treat alphabet characters this way and non-alphabet characters this way".
+# However, for decoding purposes, if I were in the NSA I'd probably prefer the former approach.
 
 
 # 1. DRIVER TESTS GO BELOW THIS LINE
