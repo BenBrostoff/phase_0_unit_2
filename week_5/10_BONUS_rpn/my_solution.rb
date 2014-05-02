@@ -1,6 +1,5 @@
 # U2.W5: Implement a Reverse Polish Notation Calculator
 
-
 # I worked on this challenge [by myself, with: ].
 
 # 2. Pseudocode
