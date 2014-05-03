@@ -1,6 +1,6 @@
 # U2.W5: VirusPredictorirus Predictor
 
-# I worked on this challenge by myself
+# I worked on this challenge with Armen.
 
 # EXPLANATION OF require_relative
 #
