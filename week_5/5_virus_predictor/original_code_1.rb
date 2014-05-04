@@ -1,27 +1,20 @@
-# U2.W5: VirusPredictorirus Predictor
+# U2.W5: Virus Predictor
 
-# I worked on this challenge with Armen.
+# I worked on this challenge [by myself, with: ].
 
 # EXPLANATION OF require_relative
 #
 #
-
-#CODE OUTPUT
-
-#Running the code below before any changes creates a report for Alabama, Jersey, California and Alaska detailing (i) the number of deaths from a virus and (ii) the speed of the spread of the virus.
-#The code produces an error message that shows STATE_DATA is an unitialized constant. 
-
 require_relative 'state_data'
 
 class VirusPredictor
 
   def initialize(state_of_origin, population_density, population, region, regional_spread)
     @state = state_of_origin
-    @population = populatution
+    @population = population
     @population_density = population_density
     @region = region
     @next_region = regional_spread
-
   end
 
   def virus_effects  #HINT: What is the SCOPE of instance variables?
