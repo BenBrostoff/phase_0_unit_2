@@ -5,9 +5,14 @@
 
 # 2. Pseudocode
 
-# Input:
-# Output:
+# Input: A die
+# Output: depending on the method, the number of sides on the die or the side that comes up on the roll
 # Steps:
+
+#Initialize sides 
+#Create a sides method that returns the instance variable sides
+#Roll method returns random number 1-6
+  #1 + rand(5)
 
 
 # 3. Initial Solution

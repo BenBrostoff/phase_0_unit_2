@@ -148,3 +148,12 @@ end
 
 #alaska = VirusPredictor.new("Alaska", STATE_DATA["Alaska"][:population_density], STATE_DATA["Alaska"][:population], STATE_DATA["Alaska"][:region], STATE_DATA["Alaska"][:regional_spread]) 
 #alaska.virus_effects
+
+
+# Reflection
+
+# Another good exercise in refactoring - the private methods lent themselves to correction here in that they mostly had linear relationships.
+# I probably took longer than I should have trying to find this relationship by drawing out a scatter plot and remembering y = mx + b.
+# Additionally, with regard to hash syntax, this exercise taught me the value of upgrading to Ruby 2.0.0. 
+# As syntax in languages change, it's important to make sure you're using the most recent version.
+

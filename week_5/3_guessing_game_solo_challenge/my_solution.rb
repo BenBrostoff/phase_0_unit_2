@@ -5,9 +5,9 @@
 
 # 2. Pseudocode
 
-# Input: 
+# Input: A "guess" input from the user
 
-# Output:
+# Output: A message indicating higher, lower or correct
 
 # Steps:
 
@@ -52,10 +52,7 @@ end
 
 # 4. Refactored Solution
 
-
-
-
-
+#In general, this code was difficult to refactor due to its brevity, and I did not complete refactoring here.
 
 # 1. DRIVER TESTS GO BELOW THIS LINE
 
