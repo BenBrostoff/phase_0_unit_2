@@ -1,50 +1,68 @@
 ## Release 2: Basic Git Commands
 Define the following commands and describe how they work/what they do.  
 
+### d-
+<!-- Delete a branch -->
+<!-- Ex. git branch -d clean_up -->
+
+### diff HEAD
+<!-- Identify most recent commit -->
+
+### diff STAGED
+<!-- See changes you just staged  -->
+
+### remote 
+<!-- Push local repo to the github server-->
 
 #### add
-<!-- Your defnition here -->
+<!-- Add file to staging area - ex. git add example_file.txt -->
 
 #### branch
-<!-- Your defnition here -->
+<!-- Create a copy (i.e. branch) to make separate commits to  -->
 
 #### checkout
-<!-- Your defnition here -->
+<!-- Switch branches -->
+<!-- Eliminate all changes since <target> -->
+<!-- Ex. git checkout --octocat.txt -->
 
 #### clone
-<!-- Your defnition here -->
+<!-- Clones repo into new directory-->
 
 #### commit
-<!-- Your defnition here -->
+<!-- Commit changes - one can add a description as well with -m [message] -->
 
 #### fetch
-<!-- Your defnition here -->
+<!-- per Terminal, download objects and references from other repositories -->
 
 #### log
-<!-- Your defnition here -->
+<!-- Remembers all commits in order changes were made-->
 
 #### merge
-<!-- Your defnition here -->
+<!-- If one has two separate branches, take changes from one branch and commit to the other	 -->
 
 #### pull
-<!-- Your defnition here -->
+<!-- Check for changes on GitHub repo and pull any new changes -->
 
 #### push
-<!-- Your defnition here -->
+<!-- Tells git where to put commits when ready; -u can be used to remember parameters -->
 
 #### reset
-<!-- Your defnition here -->
+<!-- Unstage the most recently staged file -->
 
 #### rm
-<!-- Your defnition here -->
+<!-- Remove files -->
 
 #### status
-
+<!-- View current state of project -->
 
 ## Release 4: Git Workflow
 
 - Push files to a remote repository
+1. 
+
 - Fetch changes
+
+
 - Commit locally
 
 ## Release 5: Reflection
