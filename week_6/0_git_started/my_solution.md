@@ -70,6 +70,16 @@ View current state of project
 - Commit locally
 5. git push pushes changes to the remote repo
 
+## UPDATE ON RELEASE 4
+
+After talking to Armen about this exercise, I realized my Git Workflow is overly wrong.
+A more efficient route.
+1. Navigate to the most high level directory possible
+2. gs is git status and will show you changes within the directory
+3. ga . (EMPHASIS ON DOT) will add all changes across the directory
+4. gc -m "message" to commit
+5. g push
+
 ## Release 5: Reflection
 
 I feel a bit more at ease with some of the git Terminal commands, although to be honest I'm still not as comfortable with it as I am using the Github desktop app.
