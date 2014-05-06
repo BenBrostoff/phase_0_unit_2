@@ -7,7 +7,7 @@
   #Initially, unexpected end --> CORRECTED
   #Next, wrong number of arguments on add_item --> CORRECTED
   #Next, error for undefined method clean_silverware for object --> CORRECTED
-  #Next, error for undefined method eat or nil: NilClass (because fork is empty)
+  #Next, error for undefined method eat or nil: NilClass (because fork is empty) --> CORRECTED
 
 # 2. Original Code
 class Drawer 
