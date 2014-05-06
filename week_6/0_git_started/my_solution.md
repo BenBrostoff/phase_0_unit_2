@@ -73,12 +73,12 @@ View current state of project
 ## UPDATE ON RELEASE 4
 
 After talking to Armen about this exercise, I realized my Git Workflow is overly wrong.
-A more efficient route.
+A more efficient xroute.
 1. Navigate to the most high level directory possible
-2. gs is git status and will show you changes within the directory
-3. ga . (EMPHASIS ON DOT) will add all changes across the directory
-4. gc -m "message" to commit
-5. g push
+2. git status and will show you changes within the directory
+3. git add . (EMPHASIS ON DOT) will add all changes across the directory
+4. git commit -m "message" to commit
+5. git push
 
 ## Release 5: Reflection
 
