@@ -61,6 +61,7 @@ end
 end #Added as this was first error encountered 
 
 class Silverware
+
 attr_reader :type, :clean
 
 # Are there any more methods needed in this class?

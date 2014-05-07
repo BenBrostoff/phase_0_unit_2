@@ -56,7 +56,6 @@ class Playlist
 		@songs = songs
 		@contents = []
 		@num_of_tracks = 0
-		# @@play_list += 1
 		songs.each do |num|
 			@num_of_tracks += 1
 			contents.push(num)
